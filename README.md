@@ -20,6 +20,13 @@
 
 **Setting a Password Policy**
 
-<p>Before I get into password policy work, I have to go over how to get to your Group Policy Management or GPM console. Unlike when we were working with Active Directory Users and Computers, GPM will not be in the startup menu. It is actually a separate app that should already be pre-installed on your Windows Server VM. Simply search for it on your VM and it should be the first choice that pops up. Click and open it up. Navigate to your domain, then Group Policy Objects, then right click Default Domain Controllers Policy. </p>
+<p>Before I get into password policy work, I have to go over how to get to your Group Policy Management or GPM console. Unlike when we were working with Active Directory Users and Computers, GPM will not be in the startup menu. It is actually a separate app that should already be pre-installed on your Windows Server VM. Simply search for it on your VM and it should be the first choice that pops up. Click and open it up. Navigate to your domain, then Group Policy Objects. For the sake of demonstration, right click Default Domain Controllers Policy so we can see what Group Policy Management Editor looks like. </p>
 
 <img src="screenshot_1.png">
+
+_This is what GPM should look like when you first launch it_
+
+<img src="screenshot_2.png">
+<img src="screenshot_3.png">
+
+_Navigating to Group Policy Management Editor will look something like this_ 
