@@ -19,5 +19,7 @@
   6. Applying & testing GPOs
 
 **Setting a Password Policy**
+
 <p>Before I get into password policy work, I have to go over how to get to your Group Policy Management or GPM console. Unlike when we were working with Active Directory Users and Computers, GPM will not be in the startup menu. It is actually a separate app that should already be pre-installed on your Windows Server VM. Simply search for it on your VM and it should be the first choice that pops up. Click and open it up. Navigate to your domain, then Group Policy Objects, then right click Default Domain Controllers Policy. </p>
 
+<img src="screenshot_1.png">
