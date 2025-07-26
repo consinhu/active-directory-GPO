@@ -26,14 +26,10 @@
 
 _This is what GPM should look like when you first launch it_
 
-
-
 <img src="screenshot_2.png">
 <img src="screenshot_3.png">
 
 _Navigating to Group Policy Management Editor will look something like this_ 
-
-
 
 <img src="screenshot_4.png">
 
@@ -45,8 +41,6 @@ _Navigating to Group Policy Management Editor will look something like this_
 
 <img src="screenshot_5.png">
 
-
-
 _I will show how I configured properties for minimum password length, complexity requirements, and maximum password age!_
 
 <img src="screenshot_6.png">
@@ -57,4 +51,4 @@ _Not shown, but in the second screenshot, the Security Policy Setting page is ju
 
 <p>For complexity requirements, the Explain section is just a rundown of what the typical password requirements are from Microsoft (think symbols, special characters, lowercase vs. uppercase, etc.). I've shown it just to display the important part highlighting those requirements.</p>
 
-<p>We're down with setting up a password policy! Easy, right? If you want to check your work to make sure everything saved, you can navigate to Password Policy from the GPM console and everything should be as we configured.</p>
+<p>We're done with setting up a password policy! Easy, right? If you want to check your work to make sure everything saved, you can navigate to Password Policy from the GPM console and everything should be as we configured.</p>
