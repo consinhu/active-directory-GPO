@@ -51,4 +51,6 @@ _Not shown, but in the second screenshot, the Security Policy Setting page is ju
 
 <p>For complexity requirements, the Explain section is just a rundown of what the typical password requirements are from Microsoft (think symbols, special characters, lowercase vs. uppercase, etc.). I've shown it just to display the important part highlighting those requirements.</p>
 
+<p>When you hit "Ok" for configuring maximum password age, a popup for minimum password age will appear (assuming you haven't configured it already). I just went with the default of 30 days minimum and a quarter period (90 days) for maximum meaning that users will need to wait 30 days to change a password and users MUST change their passwords every 90 days.</p>
+
 <p>We're done with setting up a password policy! Easy, right? If you want to check your work to make sure everything saved, you can navigate to Password Policy from the GPM console and everything should be as we configured.</p>
