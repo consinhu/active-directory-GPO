@@ -47,7 +47,7 @@ _I will show how I configured properties for minimum password length, complexity
 <img src="screenshot_8.png">
 <img src="screenshot_7.png">
 
-_Not shown, but in the second screenshot, the Security Policy Setting page is just a checkbox for "Define the policy setting", which will allow you to select to enable complexity requirements for passwords_
+_Not shown, but in the second screenshot, the Security Policy Setting page is just a checkbox for "Define the policy setting", which will allow you to select to enable complexity requirements for passwords. Make sure you do both_
 
 <p>For complexity requirements, the Explain section is just a rundown of what the typical password requirements are from Microsoft (think symbols, special characters, lowercase vs. uppercase, etc.). I've shown it just to display the important part highlighting those requirements.</p>
 
