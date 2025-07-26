@@ -26,10 +26,14 @@
 
 _This is what GPM should look like when you first launch it_
 
+
+
 <img src="screenshot_2.png">
 <img src="screenshot_3.png">
 
 _Navigating to Group Policy Management Editor will look something like this_ 
+
+
 
 <img src="screenshot_4.png">
 
@@ -40,6 +44,8 @@ _Navigating to Group Policy Management Editor will look something like this_
 <p>In order to navigate to the Password Policy configurations, we will look to the Computer Configuration section. This is because a password policy is a type of setting that will not change from user to user and is applies to a computer object, not a user object. We will then navigate to Windows Settings > Security Settings > Account Policies where we will finally find Password Policy. Selecting Password Policy will give us all the different policies for creating, storing, enforcing, etc. passwords.</p>
 
 <img src="screenshot_5.png">
+
+
 
 _I will show how I configured properties for minimum password length, complexity requirements, and maximum password age!_
 
