@@ -54,3 +54,7 @@ _Not shown, but in the second screenshot, the Security Policy Setting page is ju
 <p>When you hit "Ok" for configuring maximum password age, a popup for minimum password age will appear (assuming you haven't configured it already). I just went with the default of 30 days minimum and a quarter period (90 days) for maximum meaning that users will need to wait 30 days to change a password and users MUST change their passwords every 90 days.</p>
 
 <p>We're done with setting up a password policy! Easy, right? If you want to check your work to make sure everything saved, you can navigate to Password Policy from the GPM console and everything should be as we configured.</p>
+
+**Mapping Network Drives**
+
+<p>For drive mapping, I collected some screenshots to better document the process.</p>
