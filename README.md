@@ -57,4 +57,18 @@ _Not shown, but in the second screenshot, the Security Policy Setting page is ju
 
 **Mapping Network Drives**
 
-<p>For drive mapping, I collected some screenshots to better document the process.</p>
+<p>Drive mapping is the process of assigning a letter to a user's session where the letter refers to a specific network drive. Doing so will allow users to more easily access files and folders, especially if they are not on their local computer.</p>
+
+<p>For drive mapping, I collected some screenshots to better document the process. First, you will need to right-click on your chosen domain and select "Create a GPO in this domain, and Link it here..."</p>
+
+<img src="screenshot_9.png">
+
+_In Group Policy Management Editor window, navigate to User Configuration because drive mapping is specific to user sessions. Under User Navigation, navigate to Preferences > Windows Settings > Drive Maps > New > Mapped Drive_
+
+<img src="screenshot_10.png">
+
+_In New Drive Properties, make sure to specifiy a file path in location field (this one is just an example) and assign a drive letter (select User first)_
+
+<img src="screenshot_11.png">
+
+_Resulting display_
