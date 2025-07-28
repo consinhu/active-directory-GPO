@@ -90,3 +90,19 @@ _Edit window for "Prohibit access to Control Panel and PC settings_
 Once completed successfully, the setting will have changed from "Not Configured" to "Enabled".
 
 **Account Lockout Policy Configuration**
+
+<p>Now that we're getting the hang of things, I'm going to try and go over configuring an Account Lockout Policy quickly. First, create a new GPO in your domain. We want to head into the GPM Editor and navigate to the Account Lockout tab.</p>
+
+<img src="screenshot_14.png">
+
+_The above shows the pathway taken to navigate to Account Lockout settings._
+
+<p>Once there, we will need to configure all three settings. Let's say we want to configure things to prevent a brute-force attack. What would that look like?</p>
+
+<p>In general, if we're dealing with brute-force attacks, configuring everything with relatively short durations and intervals would be a good place to start. Specific ranges vary, but I personally learned that between 15-30 min is standard for lockout duration and 5-10 attempts for lockout threshold. A typical reset interval should either match or be shorter than the lockout duration.</p>
+
+<img src="screenshot_15.png">
+
+_Once configuration for one setting is in place, pressing Apply or OK will lead to another window with suggestions for the other settings. As long as the above conditions are satisfied, you should be good to go. I simply agreed with the suggested values, but you can alter them if you'd like_
+
+<p>This is the end for Part I of my Active Directory GPO Lab! In Part II, I'm going to putting these policies in motion and simulating a realistic IT administration process.</p>
