@@ -72,3 +72,5 @@ _In New Drive Properties, make sure to specifiy a file path in location field (t
 <img src="screenshot_11.png">
 
 _Resulting display_
+
+**Restricting User Access to Control Panel**
