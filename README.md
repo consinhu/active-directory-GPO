@@ -109,3 +109,10 @@ _Once configuration for one setting is in place, pressing Apply or OK will lead 
 
 
 <h1>Part II: Applying and Testing GPOs in a Client VM</h1>
+
+<p>The objectives in this part is to join a computer to the domain created and used in Part I as well as put the GPOs or Group Polices we made in action. I will now go over the steps for doing so.</p>
+
+**Setting Up a Client VM**
+<p>First thing's first, we need to launch another Windows VM in UTM, but this time it'll be easier and faster because we just need a typical Windows 10/11 Pro or Enterprise operating system. Again, I just used the file I had already downloaded from Microsoft which you can find at this [link](https://www.microsoft.com/en-us/software-download/windows11arm64). Make sure to note that this is different from Windows Server.</p>
+
+<p>I</p>
