@@ -106,3 +106,6 @@ _The above shows the pathway taken to navigate to Account Lockout settings._
 _Once configuration for one setting is in place, pressing Apply or OK will lead to another window with suggestions for the other settings. As long as the above conditions are satisfied, you should be good to go. I simply agreed with the suggested values, but you can alter them if you'd like_
 
 <p>This is the end for Part I of my Active Directory GPO Lab! In Part II, I'm going to putting these policies in motion and simulating a realistic IT administration process.</p>
+
+
+<h1>Part II: Applying and Testing GPOs in a Client VM</h1>
