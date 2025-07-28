@@ -74,3 +74,5 @@ _In New Drive Properties, make sure to specifiy a file path in location field (t
 _Resulting display_
 
 **Restricting User Access to Control Panel**
+
+<p>Restricting user access, especially for the control panel, is key to ensuring security and stability in a network environment. This can be accomplished in Active Directory through the following steps. First, you'll want to repeat the steps of right-clicking on your domain name, hitting "Create a GPO in this domain, and Link it here...", then right-clicking and hitting "Edit" on the resulting GPO. Once you are opened up to the GPM Editor window, navigate to User Configuration > Policies > Administrative Templates > Control Panel.</p>
