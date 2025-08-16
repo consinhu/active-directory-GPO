@@ -3,7 +3,7 @@
 <img width="566" src="https://www.31west.net/wp-content/uploads/2022/11/what-is-active-directory-and-why-is-it-used.png.avif" alt="active directory logo" /> </p>
 
 <h1>Part I: Navigating Group Policy Object (GPO) in On-Premises Active Directory</h1>
-<p>I will be demonstrating and explaining the processes of creating, setting up, applying, and testing GPOs in this Group Policy Management lab that is easily implementable through a virtualized Windows Server environment.</p>
+<p>I will be demonstrating and explaining the process of creating, setting up, applying, and testing GPOs in this Group Policy Management lab that is easily implementable through a virtualized Windows Server environment.</p>
 
 <p>GPOs are an important aspect of Active Directory and provide centralized management over various settings and configurations on users' and computers' environments. In terms of what they are, GPOs typically refer to a collection of settings defining what a user or computer is allowed to do on a network. They are administrative tools best for enforcing consistency, stability, and secure network environments.</p>
 
