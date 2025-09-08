@@ -35,9 +35,9 @@ _Navigating to Group Policy Management Editor will look something like this_
 
 <p>In order to create a completely new GPO policy, right-click on your domain of interest and hit "Create a GPO in this domain, and Link it here...". When the pop-up appears, fill in the name of the policy you want to add and make sure it is relevant (in this case, I used the name Password Policy)</p>
 
-<p>Before moving on to the next step, I want to discuss a bit about the different types of group policy settings that appear on the left-hand side of the Group Policy Management Editor. First, there is Computer Configuration vs. User Configuration. Computer Configuration settings apply to the local computer and do not change per user. User Configuration settings are the opposite and apply to users as well as can change depending on specific users. There is also Policies vs. Preferences. Policies settings cannot be changed by users and include password or account lockout policies. On the other hand, preferences are settings that can be altered by users and typically include mapped network drives, printers, and desktop shortcuts. Don't worry! All of this will start to make sense soon.</p>
+<p>Before moving on to the next step, let's discuss a bit about the different types of group policy settings that appear on the left-hand side of the Group Policy Management Editor. First, there is Computer Configuration vs. User Configuration. Computer Configuration settings apply to the local computer and do not change per user. User Configuration settings are the opposite and apply to users as well as can change depending on specific users. There is also Policies vs. Preferences. Policies settings cannot be changed by users and include password or account lockout policies. On the other hand, preferences are settings that can be altered by users and typically include mapped network drives, printers, and desktop shortcuts. Don't worry! All of this will start to make sense soon.</p>
 
-<p>In order to navigate to the Password Policy configurations, we will look to the Computer Configuration section. This is because a password policy is a type of setting that will not change from user to user and is applies to a computer object, not a user object. We will then navigate to Windows Settings > Security Settings > Account Policies where we will finally find Password Policy. Selecting Password Policy will give us all the different policies for creating, storing, enforcing, etc. passwords.</p>
+<p>In order to navigate to the Password Policy configurations, we will look to the Computer Configuration section. This is because a password policy is a type of setting that will not change from user to user and is applied to a computer object, not a user object. We will then navigate to Windows Settings > Security Settings > Account Policies where we will finally find Password Policy. Selecting Password Policy will give us all the different policies for creating, storing, enforcing, etc. passwords.</p>
 
 <img src="screenshot_5.png">
 
@@ -110,10 +110,33 @@ _Once configuration for one setting is in place, pressing Apply or OK will lead 
 
 <h1>Part II: Applying and Testing GPOs in a Client VM</h1>
 
-<p>The objectives in this part is to join a computer to the domain created and used in Part I as well as put the GPOs or Group Polices we made in action. I will now go over the steps for doing so.</p>
+<p>The objective in this part is to join a computer to the domain created and used in Part I as well as put the GPOs or Group Polices we made in action. I will now go over the steps for doing so.</p>
 
 **Setting Up a Client VM**
-<p>First thing's first, we need to launch another Windows VM in UTM, but this time it'll be easier and faster because we just need a typical Windows 10/11 Pro or Enterprise operating system. Again, I just used the file I had already downloaded from Microsoft which you can find at this link: https://www.microsoft.com/en-us/software-download/windows11arm64. Make sure to note that this is different from Windows Server.</p>
+<p>First thing's first, we need to launch another Windows VM in UTM, but this time it'll be easier and faster because we just need a typical Windows 10/11 Pro or Enterprise operating system (note: Microsoft is officially stopping updates and patches for all Windows 10 models by October 2025 so it's best to get a Windows 11 VM). Again, I just used the file I had already downloaded from Microsoft which you can find at this link: https://www.microsoft.com/en-us/software-download/windows11arm64. Make sure to note that this is different from Windows Server.</p>
 
 **Configuring a DNS Server and Joining Client VM to Domain**
-<p>In your Windows Server VM, navigate to your Network and Internet Settings >  Ethernet > Change Adapter Options > Ethernet Properties > TCP/IPv4 Properties. Enter the IP information into the appropriate spaces. You can find this information by inputting ipconfig command into the command prompt as shown below. In order for accurate details to be returned back, make sure you have internet connection on your VM. If you don't already, you may need to shut down the VM, go into the settings of the VM from the UTM launch window, and change network adapter settings (i.e. changing from standard to bridged adapter). You might also just need UTM guest tools installed for which there are numerous tutorials online.</p>
+<p>In your Windows Server VM, navigate to your Network and Internet Settings >  Ethernet > Change Adapter Options > Ethernet Properties > TCP/IPv4 Properties. Enter the IP information into the appropriate spaces. You can find this information by inputting ipconfig command into the command prompt as shown below. In order for accurate details to be returned back, make sure you have internet connection on your VM. If you don't already, you may need to shut down the VM, go into the settings of the VM from the UTM launch window, and change network adapter settings (i.e. changing from Shared Network to Bridged). You might also just need UTM guest tools installed for which there are numerous tutorials online.</p>
+
+<img src="screenshot_16.png">
+
+<img src="screenshot_17.png">
+
+_Map the DNS server for Windows Server back to itself using 127.0.0.1 known as a loopback address. For an alternate DNS server, I just used Google's Public DNS which is open-source and can be used by anyone to resolve DNS services_
+
+
+Note: Make sure to uncheck the IP Version 6 option as this may cause issues with connecting the client VM to the DNS Server later. I forgot to at first and it gave me a lot of issues later.
+
+<p>After finishing configurations for Windows Server which should now be the Doman Controller (DC), you'll want to do basically the same steps for your Windows client machine as well. Navigate to Control Panel > Network & Internet > Network & Sharing Center > Change Adapter Settings > Ethernet > Properties > TCP/IPv4. </p>
+
+<img src="screenshot_18.png"> 
+
+ _Also disable IPv6 here too. Notice that for the client, we are just configuring the DNS server section of IPv4 Properties. Leave the rest as default!_
+
+ <p>Once you are finished, it's a good idea to test that the DNS server is actually reachable by pinging the Windows server address (now the static IP for both server and client) in the command prompt. You should also test ping your domain name on the client machine as well. Additional tests like nslookup and ipconfig /all may also be helpful for seeing more information or troubleshooting purposes. During these processes, you want to make sure both client and server machines are up and running. </p>
+
+ <p>If both are successful, then you can move on to actually joining the client machine to the domain. To do so, navigate to File Explorer > Right-click This PC > Properties > Advanced system settings > Computer Name > Change. Then rename the machine as you'd like and make sure to input the correct domain name. If completed successfully, a Windows Security pop-up should appear, like the example below, requesting some information. If not, there might be some DNS configuration issues that need troubleshooting (i.e. disabling IPv6, making sure there's Internet connection, etc.)</p>
+
+ <img src="screenshot_19.png">
+
+ _After successfuly joining a new domain, the client machine will prompt for a restart_
