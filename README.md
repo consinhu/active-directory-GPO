@@ -140,3 +140,8 @@ Note: Make sure to uncheck the IP Version 6 option as this may cause issues with
  <img src="screenshot_19.png">
 
  _After successfuly joining a new domain, the client machine will prompt for a restart_
+
+**Applying GPOs**
+<p>In order to apply GPOs in Active Directory, first navigate to Group Policy Management and then to the Group Policy Objects folder. To actually do the applying, you simply drag-and-drop different GPOs to their appropriate folder which depends on what kind of policy they are (computer vs. user). I have provided an example of a proper distribution of GPOs down below.</p>
+
+
