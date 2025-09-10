@@ -144,4 +144,9 @@ Note: Make sure to uncheck the IP Version 6 option as this may cause issues with
 **Applying GPOs**
 <p>In order to apply GPOs in Active Directory, first navigate to Group Policy Management and then to the Group Policy Objects folder. To actually do the applying, you simply drag-and-drop different GPOs to their appropriate folder which depends on what kind of policy they are (computer vs. user). I have provided an example of a proper distribution of GPOs down below.</p>
 
+<img src="screenshot_20.png">
+
+<p>Also, depending on which folder you have just applied the GPOs in, you must also then move the client computer created in this lab to the same geographic location. In my case, my next step would be to move computer COMP01 (the name I renamed my Windows 11 Pro machine) to the USA folder. To do so, you must navigate to Active Directory Users and Computers in the Startup menu and to the Computers folder. Right-click on the client machine > Move > USA > Computers.</p>
+
+**Testing GPOs**
 
